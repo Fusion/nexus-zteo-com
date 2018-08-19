@@ -1,0 +1,14 @@
+baseURL = "http://zteo.com/"
+languageCode = "en-us"
+title = "The Nexus"
+theme = "bleak"
+
+pygmentsUseClasses = true
+pygmentsCodefences = true
+pygmentsCodefencesGuessSyntax = false
+
+[params]
+  subtitle = "Chris' Den Of Confusion"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
