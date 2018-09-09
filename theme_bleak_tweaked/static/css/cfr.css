@@ -1,0 +1,81 @@
+#video-background {
+  position: fixed;
+  right: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  z-index: -100;
+}
+
+kbd{
+  white-space:nowrap;
+  color:#000;
+  background:#eee;
+  border-style:solid;
+  border-color:#ccc #aaa #888 #bbb;
+  padding:2px 6px;
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+  border-radius:4px;
+  -moz-box-shadow:0 2px 0 rgba(0, 0, 0, 0.2),0 0 0 1px #ffffff inset;
+  -webkit-box-shadow:0 2px 0 rgba(0, 0, 0, 0.2),0 0 0 1px #ffffff inset;
+  box-shadow:0 2px 0 rgba(0, 0, 0, 0.2),0 0 0 1px #ffffff inset;
+  background-color:#FAFAFA;
+  border-color:#CCCCCC #CCCCCC #FFFFFF;
+  border-style:solid solid none;
+  border-width:1px 1px medium;
+  color:#444444;
+  font-family:'Helvetica Neue',Helvetica,Arial,Sans-serif;
+  font-size:11px;
+  font-weight:bold;
+  white-space:nowrap;
+  display:inline-block;
+  margin-bottom:5px;
+}
+
+.simpletab1 {
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  overflow: hidden;
+  width: 70%;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #2D2D2D;
+  border-bottom: 2px solid #009ff2;
+  background-color: #f1f1f1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.simpleitem1 {
+  margin-bottom: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: relative;
+  overflow: hidden;
+  width: 70%;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #2D2D2D;
+  background-color: #f1f1f1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.noticesc {
+  width: 90%;
+  margin: 2em auto;
+  font: 300 1.15em/1.5 "Raleway", sans-serif;
+  color: #333333;
+  text-shadow: 0 1px 0 #ebebeb;
+  border: 1px solid #dedede;
+  border-left: none;
+  border-right: none;
+  padding: 1em;
+}

@@ -7,6 +7,11 @@ pygmentsUseClasses = true
 pygmentsCodefences = true
 pygmentsCodefencesGuessSyntax = false
 
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
 [params]
   subtitle = "Chris' Den Of Confusion"
 
