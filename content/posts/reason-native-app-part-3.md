@@ -3,7 +3,7 @@ title: "Creating a ReasonML Native App: Building and Running"
 date: 2018-09-08T13:33:01-03:00
 tags: ["reason", "functional"]
 series: ["Reason Native App"]
-draft: true
+draft: false
 ---
 
 This is by far the most boring piece of this whole endeavor.

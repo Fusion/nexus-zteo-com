@@ -3,14 +3,14 @@ title: "Creating a ReasonML Native App: Configuration Files"
 date: 2018-09-08T13:33:01-05:00
 tags: ["reason", "functional"]
 series: ["Reason Native App"]
-draft: true
+draft: false
 ---
 
 This is going to be a fairly short post, as it focuses on using the `config-file` library. As previously mentioned, when I mention a library in RasonML's native context, chances are pretty good that I am referring to one of OCaml's many available libraries.
 
 <!--more-->
 
-Our configuration files are not going to be json-formatted of xml-based; instead they are a tad...OCaml-ish, which of course is only true because of the comments:
+Our configuration files are not going to be json-formatted of xml-based; instead they are a tad...OCaml-ish, which of course is instantly betrayed by our use of comments:
 
 ```ocaml
 host_info = {

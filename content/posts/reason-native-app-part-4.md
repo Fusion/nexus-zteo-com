@@ -3,7 +3,7 @@ title: "Creating a ReasonML Native App: Command Line Arguments"
 date: 2018-09-08T13:33:01-04:00
 tags: ["reason", "functional"]
 series: ["Reason Native App"]
-draft: true
+draft: false
 ---
 
 Before going into how specific features were implemented with Reason and OCaml's help, let's have a quick look at our application's logic
@@ -49,7 +49,7 @@ The beauty of having pattern matching available is that we can quickly write som
 
 First, we are going to have a quick look at `Sys.argv` to determine what high level operation we are trying to perform. We may wish to run a scenario, edit its json file, display our program's help page, etc.
 
-Keeping in mind that, as in any language, argv[0] represents our executable itself, here is some simple routing:
+Keeping in mind that, as in any language, `argv[0]` represents our executable itself, here is some simple routing:
 
 ```ocaml
 let () =
@@ -156,6 +156,6 @@ exception InvalidArgument(string);
 ```
 
 Yes, ReasonML has exceptions support. No, you should not use them in idiomatic code. Here, I am using exceptions because I wish to bail out of the program itself. If it was in the middle of, say, processing files in a fairly long loop, returning an `option` object would allow the program to treat this error code as any expected condition.
-The authors of the Rust language decided not to support exceptions and instead always provide error codes. This forces the developer to immediately think about how to handle these errors, as opposed to passing the buck further up the execution stack.
+This is not a new pattern, but it is worth noticing its adoption in "modern" languages: the authors of the Rust language decided not to support exceptions and instead always provide error codes. This forces the developer to immediately think about how to handle these errors, as opposed to passing the buck further up the execution stack.
 
 

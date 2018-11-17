@@ -3,7 +3,7 @@ title: "Creating a ReasonML Native App: What We Are Building"
 date: 2018-09-08T13:33:01-01:00
 tags: ["reason", "functional"]
 series: ["Reason Native App"]
-draft: true
+draft: false
 ---
 
 I believe this is, as of now (2018), one of few articles you will find about creating a native application using [ReasonML](https://reasonml.github.io/). While Facebook came up with this interesting language/syntax that compiles to OCaml, it seems that they have focused their energy on transpiling it to JavaScript using [BuckleScript](https://github.com/BuckleScript/bucklescript)
@@ -12,9 +12,13 @@ I believe this is, as of now (2018), one of few articles you will find about cre
 
 This means that if you wish to create a "native" application, it seems that you are expected to rely on ~~Node and Electron~~. And that's a shame, because OCaml itself provides a very competent native compiler and we are going to use it. I hope I can remember all the hoops I had to jump through so that you don't have to.
 
+<i class="fa fa-github"></i> [GitHub Project](https://github.com/Fusion/reasonable-fidelity)
+
 # My goal
 
-Creating an application that provides an easy way to check that a web site — especially a single page application ('SPA') — reliably sends the same replies to the same queries, thus avoiding regressions due to new features being added or old issues being addressed.
+This is, hopefully, the first of a series of blog posts I will write over a few weeks to make it easier for anyone else to start using ReasonML natively.
+
+I will show you how I created an application that provides an easy way to check that a web site — especially a single page application ('SPA') — reliably sends the same replies to the same queries, thus avoiding regressions due to new features being added or old issues being addressed.
 
 This application needs to be fast and multi platforms.
 
@@ -57,11 +61,14 @@ This was step #1. Step #2 consists of running our application ("reasonable fidel
 Yes, there's a -- very -- short version:
 
 * Forget about all the JavaScript interop literature you will find online
-* OCaml -- and its vast library -- is your secret weapon: after all, Reason lives on top of OCaml!
+* OCaml -- and its vast library -- is your (not-at-all) secret weapon: after all, Reason lives on top of OCaml!
 
 Don't panic! If you are not all that familiar with OCaml's syntax, Reason comes with an excellent tool called `refmt` which allows you to translate OCaml code to Reason.
 
 Keep in mind that, target-wise, native compiling and using BuckleScript **do not** intersect:
+
+(Refresh if the diagram below doesn't display properly)
+
 {{<mermaid>}}
 graph TB;
     sc["Reason Code"] --> |compile| oc["Ocaml Code"]

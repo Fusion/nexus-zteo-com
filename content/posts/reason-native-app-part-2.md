@@ -3,7 +3,7 @@ title: "Creating a ReasonML Native App: Installing, Editing, Configuring"
 date: 2018-09-08T13:33:01-02:00
 tags: ["reason", "functional"]
 series: ["Reason Native App"]
-draft: true
+draft: false
 ---
 
 # Installing Reason
