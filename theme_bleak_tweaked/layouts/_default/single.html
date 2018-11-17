@@ -35,7 +35,11 @@
                     {{ range .Site.Pages.Reverse }}
                         {{ $relatedPosts := intersect $series .Params.series | len | lt 0 }}
                         {{ if and $relatedPosts (ne .Permalink $currentPagePermalink) }}
-                            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                            {{ if (ne .Type "notyet") }}
+                                <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                            {{ else }}
+                                <li>{{ .Title }}</li>
+                            {{ end }}
                         {{ end }}
                     {{ end }}
                     </ul>
