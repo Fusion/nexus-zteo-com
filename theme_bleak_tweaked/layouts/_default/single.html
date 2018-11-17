@@ -25,13 +25,14 @@
                     </audio>
                 {{ end }}
 
+                {{/* Display related posts if in a series */}}
                 {{ $currentPagePermalink := .Permalink }}
                 {{ if (gt .Params.series 0) }}
                     <div class="noticesc">
                     This post is part of a series. Related posts:
                     <ul>
                     {{ $series := .Params.series }}
-                    {{ range .Site.Pages }}
+                    {{ range .Site.Pages.Reverse }}
                         {{ $relatedPosts := intersect $series .Params.series | len | lt 0 }}
                         {{ if and $relatedPosts (ne .Permalink $currentPagePermalink) }}
                             <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>

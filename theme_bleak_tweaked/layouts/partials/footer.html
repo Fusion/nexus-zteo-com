@@ -18,14 +18,9 @@
 <source src="{{ .Site.BaseURL }}images/hd0198.mp4" type="video/mp4">
 </video>
 
-<!--
-<script src="{{ .Site.BaseURL }}/js/jquery.min.js"></script>
-<script src="{{ .Site.BaseURL }}/js/jquery-ui.min.js"></script>
-<script src="{{ .Site.BaseURL }}/js/video.js"></script>
-<script src="{{ .Site.BaseURL }}/js/bigvideo.js"></script>
-<script src="{{ .Site.BaseURL }}/js/cfr.js"></script>
--->
+<script src="{{"mermaid/mermaid.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
 <script async src="{{ .Site.BaseURL }}/js/main.js"></script>
+
 <script>
 /* Wait until jQuery is available,
    then add a double tap handler for touch devices */
@@ -73,6 +68,10 @@ defer(function() {
     };
     jQuery( '#nav li:has(ul)' ).doubleTapToGo();
 });
+</script>
+
+<script>
+    mermaid.initialize({ startOnLoad: true });
 </script>
 
 {{ if .Site.Params.googleAnalyticsUserID }}

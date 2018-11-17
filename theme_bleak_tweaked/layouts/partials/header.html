@@ -34,6 +34,9 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="preload" href="{{ .Site.BaseURL }}/js/main.js" as="script" />
     <link rel="preload" href="{{ .Site.BaseURL }}/css/main.css" as="style" />
+    <!-- Mermaid -->
+    <link href="{{"mermaid/mermaid.cfr.css" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}" type="text/css" rel="stylesheet" />
+    <!-- Mermaid -->
     <!-- CFR -->
     <link rel="preload" href="{{ .Site.BaseURL }}/css/cfr.css" as="style" />
     <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css">
