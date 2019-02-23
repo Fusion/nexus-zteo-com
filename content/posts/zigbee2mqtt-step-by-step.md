@@ -29,7 +29,7 @@ You also need to flash a specific firmware om this dongle. The firmware can be f
 
 
 
-It should get a couple weeks for these components to arrive after you order them.
+It should take a couple weeks for these components to arrive after you order them.
 
 [This page](https://koenkk.github.io/zigbee2mqtt/getting_started/flashing_the_cc2531.html) does a pretty good job of explaining how to flash the firmware. A few things that are not immediately clear, though:
 
@@ -159,6 +159,14 @@ Software-side, it is as simple as removing our local database:
 rm data/database.db
 ```
 
+Of course, this is the nuclear option: all your devices are now gone from the database.
+
+To cleanly remove **a single** device, send this message (see below for more MQTT information):
+
+```yaml
+zigbee2mqtt/bridge/config/remove: {"friendly_name": "{device name}"}
+```
+
 Dongle-side, let's write a quick program that will perform a hard reset:
 
 ```js
@@ -223,11 +231,19 @@ homeassistant/sensor/0x....
 
 You should now find the corresponding devices in Home Assistant's device state page.
 
+Alternatively, you can use the [mosquitto publisher client](https://mosquitto.org/man/mosquitto_pub-1.html) so, for instance, to remove a device as described earlier:
+
+```bash
+mosquito_pub -h {IP address of your mqtt broker} -t zigbee2mqtt/bridge/config/remove -m '{"friendly_name": "{device name}"}'
+```
+
+
+
 ## systemctl
 
-So, after getting all this working, you've been following [these instructions](https://koenkk.github.io/zigbee2mqtt/getting_started/running_zigbee2mqtt.html) but it's not working.
+So, after getting all this working, you've been following [these instructions](https://koenkk.github.io/zigbee2mqtt/getting_started/running_zigbee2mqtt.html) but **that** is not working.
 
-If, like me, you are using `nodenv`, then you need to adapt the startup script a smidge. In my example:
+If, like me, you are using `nodenv`, then you need to adapt the startup script a smidge. In my case:
 
 ```toml
 ExecStart=/home/chris/.nodenv/versions/10.14.2/bin/node index.js
