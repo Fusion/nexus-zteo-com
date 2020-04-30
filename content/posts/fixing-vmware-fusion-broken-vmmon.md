@@ -16,7 +16,7 @@ Here are three different fixes, because this is definitely nor a "one size fits 
 
 ## 1-If Fusion complains about not being authorized
 
-Go to the {{< simpleitem 1>}}Security andd Privacy{{< /simpleitem >}} control panel; make sure that both App Store and signed applications are authorized; check that Fusion is not explicitely blacklisted.
+Go to the {{< simpleitem 1>}}Security and Privacy{{< /simpleitem >}} control panel; make sure that both App Store and signed applications are authorized; check that Fusion is not explicitely blacklisted.
 
 ## 2-Starting with Mojave: is disk access authorized?
 

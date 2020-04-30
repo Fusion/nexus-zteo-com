@@ -1,6 +1,16 @@
 {{ $baseurl := .Site.BaseURL }}
 {{ partial "header.html" . }}
 
+<style>
+@media(min-width:1024px) {
+	main {
+		display: grid;
+		grid-template-columns: 100% 100%;
+	}
+}
+
+</style>
+
 <main class="content" role="main">
     <article class="post post-with-bg">
         <div class="inner">
@@ -46,7 +56,20 @@
                     </div>
                 {{ end }}
 
-                {{ .Content }}
+
+                {{ if gt (len .TableOfContents) 80}}
+                    <main>
+                        <div class="content blog-content">
+                        {{ .Content }}
+                        </div>
+                        <aside class="hidden lg:block tableOfContentContainer border-indigo-200" id="tableOfContentContainer">
+                        <h3>Contents</h3>
+                        {{ .TableOfContents }}
+                        </aside>
+                    </main>
+                {{ else }}
+                    {{ .Content }}
+                {{ end }}
               </section>
 
               <footer class="post-footer">
@@ -103,5 +126,29 @@
         </div>
     </article>
 </main>
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+    const observerForTableOfContentActiveState = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            const id = entry.target.getAttribute('id');
+
+            if (entry.intersectionRatio > 0) {
+                clearActiveStatesInTableOfContents();
+                document.querySelector(`aside nav li a[href="#${id}"]`).parentElement.classList.add('active');
+            }
+        });
+    });
+
+    document.querySelectorAll('h1[id],h2[id],h3[id],h4[id]').forEach((section) => {
+        observerForTableOfContentActiveState.observe(section);
+    });
+});
+
+function clearActiveStatesInTableOfContents() {
+    document.querySelectorAll('aside nav li').forEach((section) => {
+        section.classList.remove('active');
+    });
+}
+</script>
 
 {{ partial "footer.html" . }}

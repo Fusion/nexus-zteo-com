@@ -17,3 +17,9 @@ series = "series"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 1
