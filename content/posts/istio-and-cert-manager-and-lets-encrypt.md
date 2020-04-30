@@ -314,7 +314,7 @@ metadata:
   namespace: cert-manager
 type: Opaque
 stringData:
-  api-token: baZliX0yn6jHYq_iFRF0-iE2wceRq4Fo1cJfaKtj
+  api-token: your-cloudflare-token
 EOF
 
 kubectl apply -f acme-store-token.yaml
@@ -331,14 +331,14 @@ metadata:
   namespace: cert-manager
 spec:
   acme:
-    email: chris@yoursite.com
+    email: you@yoursite.com
     server: https://acme-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
       name: acme-issuer-account-key
     solvers:
     - dns01:
         cloudflare:
-          email: chris@yoursite.com
+          email: you@yoursite.com
           apiTokenSecretRef:
             name: cloudflare-api-token-secret
             key: api-token
@@ -363,8 +363,8 @@ metadata:
   namespace: default
 spec:
   dnsNames:
-    - test1.gamesmap.com
-  secretName: acme-test1-gamesmap-secret
+    - web.yoursite.com
+  secretName: acme-web-yoursite-secret
   issuerRef:
     name: cloudflare-letsencrypt-prod
     kind: ClusterIssuer
