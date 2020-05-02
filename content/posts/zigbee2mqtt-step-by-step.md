@@ -21,7 +21,7 @@ It is a bit tricky to get working because every step needs to be performed in th
 
 First, you need hardware that will work with this project. You will be using a Texas Instruments CC2531USB sniffer to read/write Zigbee RF packets. I found mine in this eBay listing: [CC2531 CC2540 Sniffer Protocol Analyzer USB Dongle&BTool + Downloader for Zigbee](https://www.ebay.com/itm/CC2531-CC2540-Sniffer-Protocol-Analyzer-USB-Dongle-BTool-Downloader-for-Zigbee/202095932748?ssPageName=STRK%3AMEBIDX%3AIT&var=502090253363&_trksid=p2057872.m2749.l2649). Yes, it comes with its own download cable.
 
-![Example image](/images/cc2351.jpg)
+![Example image](/images/cc2351.jpg "cc2351")
 
 You also need to flash a specific firmware om this dongle. The firmware can be found [here](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/CC2531/bin) and the box to flash it in this listing: [CC Debugger and Programmer Downloader for RF System-on-Chips ICSH015A](https://www.ebay.com/itm/CC-Debugger-and-Programmer-Downloader-for-RF-System-on-Chips-ICSH015A/291997463057?ssPageName=STRK%3AMEBIDX%3AIT&_trksid=p2057872.m2749.l2649).
 

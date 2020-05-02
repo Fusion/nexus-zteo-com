@@ -1,0 +1,9 @@
+<script>
+    /* ref. https://basiclightbox.electerious.com/ */
+    document.getElementById('{{ .Get "id" }}').onclick = () => {
+        const instance = basicLightbox.create(`
+        {{ .Inner }}
+        `);
+        instance.show();
+    }
+</script>

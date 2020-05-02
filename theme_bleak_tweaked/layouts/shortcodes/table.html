@@ -1,0 +1,10 @@
+{{ $hasCaption := isset .Params "caption" }}
+{{ $caption    := .Get "caption" }}
+{{ $pure := .Get "pure" }}
+{{ $captionEl  := printf "<table class=\"tablesc\"><caption style=\"display: none;\">%s</caption>" $caption }}
+{{ if (and $pure (eq $pure true)) }}
+{{ $captionEl  = printf "<table class=\"pure-table pure-table-striped\"><caption style=\"display: none;\">%s</caption>" $caption }}
+{{ end }}
+{{ $table      := .Inner | markdownify }}
+{{ $html       := cond $hasCaption ($table | replaceRE "<table>" $captionEl) $table | safeHTML }}
+{{ $html }}
