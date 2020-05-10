@@ -1,8 +1,18 @@
+{{ $id := .Get "id" }}
+{{ $type := .Get "type" | default "default" }}
+{{ $height := .Get "height" | default "100%" }}
 <script>
-    /* ref. https://basiclightbox.electerious.com/ */
+{{ $content := "" }}
+{{ if eq $type "default" }}
+    {{ $content = print "<div class='modal' height=" $height ">" .Inner "</div>" }}
+{{ else if eq $type "scrollable" }}
+    {{ $content = print "<div class='modal' height=" $height " style='max-height: calc(100vh - 210px); overflow-y: auto;'>" .Inner "</div>" }}
+{{ else if eq $type "iframe" }}
+{{ $content = print "<div class='modal'><iframe frameborder='0' scrolling='yes' width='100%' height='" $height "' src='" .Inner "'></iframe>" }}
+{{ end }}
     document.getElementById('{{ .Get "id" }}').onclick = () => {
         const instance = basicLightbox.create(`
-        {{ .Inner }}
+            {{ $content }}
         `);
         instance.show();
     }
