@@ -1,5 +1,5 @@
 +++
-date = "2020-05-08:54:24+02:00"
+date = "2020-05-06T10:54:24+02:00"
 draft = false
 title = "Setup Kiali, Analyse Your Mesh"
 slug = "kiali-and-your-mesh"
@@ -16,6 +16,8 @@ description = ""
 # Why would I want Kiali?
 
 If you have been playing/using a service mesh for any length of time, you may have noticed that there is a certain cognitive overhead in trying to figure out traffic flows. Even using the CLI to understand injected routes can require spending a good long time in the "zone."
+
+<!--more-->
 
 {{< img-process ProgrammerInterrupted.png Resize "60x" prgint >}}
 {{< lightbox id="prgint" type=scrollable >}}<img src="/images/ProgrammerInterrupted.png">{{< /lightbox >}}
