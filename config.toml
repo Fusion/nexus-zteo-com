@@ -25,3 +25,5 @@ series = "series"
     endLevel = 4
     ordered = false
     startLevel = 1
+  [markup.goldmark.renderer]
+    unsafe= true
