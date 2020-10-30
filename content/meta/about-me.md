@@ -15,9 +15,9 @@ description = ""
 
 For glory or shame, this is all me:
 
-* {{<raw-html>}}<a rel="me" href="https://social.zteo.com/@chris">Federated</a>{{</raw-html>}}
-* {{<raw-html>}}<a rel="me" href="https://github.com/fusion">GitHub</a>{{</raw-html>}}
-* {{<raw-html>}}<a rel="me" href="https://www.linkedin.com/in/raven/">LinkedIn</a>{{</raw-html>}}
+* {{<raw-html>}}<a rel="me authn" href="https://social.zteo.com/@chris">Federated</a>{{</raw-html>}}
+* {{<raw-html>}}<a rel="me authn" href="https://github.com/fusion">GitHub</a>{{</raw-html>}}
+* {{<raw-html>}}<a rel="me authn" href="https://www.linkedin.com/in/raven/">LinkedIn</a>{{</raw-html>}}
 * {{<raw-html>}}<a rel="me" href="https://forum.xda-developers.com/member.php?u=2965329">xda-developers</a> (<a rel="me" href="https://www.appbrain.com/dev/Chris+Ravenscroft/">stats</a>){{</raw-html>}}
 * {{<raw-html>}}<a rel="me" href="https://community.spiceworks.com/people/chrisravenscroft">SpiceWorks</a>{{</raw-html>}}
 
