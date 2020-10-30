@@ -24,6 +24,9 @@
 
             {{ $paginator := .Paginate (where (where .Site.RegularPages "Section" "in" .Site.Params.mainSections) "Type" "ne" "notyet") }}
 
+            {{ range .Site.Taxonomies.tags.urgent }}
+			  {{ .Render "li" }}
+            {{ end }}
 			{{ range $index, $page := $paginator.Pages }}
 			  {{ .Render "li" }}
 			{{ end }}

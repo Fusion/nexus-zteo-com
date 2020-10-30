@@ -13,16 +13,15 @@ featured = false
 description = ""
 +++
 
-**This post has spent so much time in my draft folder that I am finally pulling the trigger even though I would styll very much find the time to tell you about these additional points:**
+This post has spent so much time in my draft folder that I am finally pulling the trigger even though I would styll very much find the time to tell you about these additional points:
 
 - major bug: 443
 - there are simpler alternatives: linkerd
 - should u use in production?
 - yes it is a steep learning curve
 - breaking changes
-not negative: like changes are good -- also very flexible
-complexity debugging routes for instance01~
 
+<!--more-->
 
 So, without further ado:
 # Some major bugs are lurking
