@@ -1,6 +1,6 @@
 +++
-date = "2020-05-06T10:54:24+02:00"
-draft = true
+date = "2020-10-06T10:54:24-08:00"
+draft = false
 title = "Things to know about Istio"
 slug = "things-to-know-about-istio"
 tags = ["kubernetes","service mesh"]
@@ -13,7 +13,8 @@ featured = false
 description = ""
 +++
 
-ISTIO
+**This post has spent so much time in my draft folder that I am finally pulling the trigger even though I would styll very much find the time to tell you about these additional points:**
+
 - major bug: 443
 - there are simpler alternatives: linkerd
 - should u use in production?
@@ -23,6 +24,7 @@ not negative: like changes are good -- also very flexible
 complexity debugging routes for instance01~
 
 
+So, without further ado:
 # Some major bugs are lurking
 
 For instance, here is one I wasted quite a lof of time figuring out: all outgoing HTTPS connections were failing with protocol error messages. As I will discuss in another post, this was making it difficult to convince Argocd to communicate with Github. But why?

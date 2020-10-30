@@ -1,8 +1,17 @@
----
-title: "Fixing Vmware Fusion Broken Vmmon"
-date: 2019-02-23T14:06:09-08:00
-draft: true
----
++++
+date = "2019-02-23T14:54:24-08:00"
+draft = false
+title =  "Fixing Vmware Fusion Broken Vmmon"
+slug = "decoy-pricing-bloomberg"
+tags = ["business", "cogsci"]
+image = "bloomberg-subscription.jpg"
+comments = true	# set false to hide Disqus
+share = true	# set false to hide share buttons
+menu= ""		# set "main" to add this content to the main menu
+author = ""
+featured = false
+description = ""
++++
 Obviously, this post is MacOS-specific. This is about when Fusion throws the dreaded
 
 > /dev/vmmon: broken pipe
