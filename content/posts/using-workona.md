@@ -11,6 +11,7 @@ menu= ""		# set "main" to add this content to the main menu
 author = ""
 featured = false
 description = ""
+summary = "An introduction to Workona's tab for idiots like me."
 
 +++
 
