@@ -1,0 +1,15 @@
+<style>
+.main-image {
+    background-position: center;
+    background-size: cover;
+    background-image: url(/images/{{ .Get "image" }});
+    height: {{ .Get "height" }};
+}
+</style>
+<section class="hero is-large is-dark main-image">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h2 class="title is-1">{{ .Get "text" }}</h2>
+        </div>
+    </div>
+</section>
