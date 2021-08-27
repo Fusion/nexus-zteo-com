@@ -1,4 +1,4 @@
-baseURL = "http://zteo.com/"
+baseURL = "https://zteo.com/"
 languageCode = "en-us"
 title = "The Nexus"
 theme = "bleak"
