@@ -170,4 +170,12 @@ This being said, I should also include an h-card (as defined in microforrmats2 s
 
 More here: http://microformats.org/wiki/microformats2#h-card
 
-Finally, todo: research Bridgy (https://indieweb.org/Bridgy)
+Finally, **done**: research Bridgy (https://indieweb.org/Bridgy)
+
+In the end, this blog implements:
+
+- mf2: h-feed, h-entry, e-content, p-name, dt-published, u-url
+- Webmention (including pingback)
+- IndieAuth (rel=me)
+- Open Graph (https://oqp.me)
+

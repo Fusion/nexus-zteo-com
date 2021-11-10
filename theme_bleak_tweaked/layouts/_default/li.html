@@ -1,7 +1,7 @@
 {{ if .Params.featured }}
-<article class="post {{ .Section }} featured">
+<article class="post {{ .Section }} featured h-entry">
 {{ else }}
-<article class="post {{ .Section }}">
+<article class="post {{ .Section }} h-entry">
 {{ end }}
 	<div class="inner">
 		<a class="post-link" href="{{ .Permalink }}"></a>
